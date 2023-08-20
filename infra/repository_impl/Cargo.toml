@@ -1,0 +1,20 @@
+[package]
+name = "repository_impl"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.75"
+async-trait = "0.1.73"
+
+
+db_schema = { version = "0.1.0", path = "../db_schema" }
+derive-new = "0.5.9"
+diesel = { version = "2.1.0", features = ["postgres", "r2d2"] }
+domain = { version = "0.1.0", path = "../../domain" }
+error = { version = "0.1.0", path = "../../common/error" }
+r2d2 = "0.8.10"
+r2d2_postgres = "0.18.1"
+tokio = { version = "1.32.0", features = ["rt-multi-thread"] }

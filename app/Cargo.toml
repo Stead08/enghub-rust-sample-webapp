@@ -1,0 +1,17 @@
+[package]
+name = "app"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+app_context = { version = "0.1.0", path = "../context/app_context" }
+diesel = { version = "2.1.0", features = ["postgres", "r2d2"] }
+dotenv = "0.15.0"
+grpc_handler = { version = "0.1.0", path = "../infra/grpc_handler" }
+r2d2 = "0.8.10"
+r2d2_postgres = "0.18.1"
+repository_impl = { version = "0.1.0", path = "../infra/repository_impl" }
+tokio = { version = "1.32.0", features = ["macros", "rt-multi-thread"] }
+tonic = "0.9.2"
